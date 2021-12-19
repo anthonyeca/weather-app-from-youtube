@@ -1,4 +1,4 @@
-var apiKey = config.MY_API_TOKEN;
+const API_KEY = "3cf520cecde48f2337c5f9ca59a9d1fd";
 
 let weather = {
   fetchWeather: function (city) {
@@ -6,7 +6,7 @@ let weather = {
       "https://api.openweathermap.org/data/2.5/weather?q=" +
         city +
         "&units=metric&appid=" +
-        apiKey
+        API_KEY
     )
       .then((Response) => Response.json())
       .then((data) => this.displayWeather(data));
